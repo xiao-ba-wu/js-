@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        var arr = ['1','2','3']
+
+        for(var i = 0;i<arr.length;i++){
+            console.log(arr[i])
+        }
+        
+        var str = [
+            {name: 'adada',age:27},
+            {name: 'adada',age:27},
+            {name: 'adada',age:27},
+            {name: 'adada',age:27},
+            {name: 'adada',age:27}
+
+        ]
+        console.log(str)
+        
+        for(var i = 0;i<str.length;i++){
+            console.log('姓名:   ',str[i].name,'年龄： ',str[i].age)
+        }
+       ///
+        var teacher = [
+            {name: '反正',dec:'淑女'},
+            {name: '反正',dec:'淑女'},
+            {name: 'adada',age:27},
+            {name: 'adada',age:27},
+            {name: 'adada',age:27},
+            {name: 'adada',age:27},
+            {name: 'adada',age:27}
+        ]
+        // document.write(`<h1>ntrnten</h1>`)
+
+        for(var i = 0;i<teacher.length;i++){
+            // document.write('姓名:   ',teacher[i].name,'年龄： ',teacher[i].dec)
+            // console.log('姓名:   ',teacher[i].name,'年龄： ',teacher[i].dec)
+            document.write(
+            `<h1>姓名: ${teacher[i].name},描述：${teacher[i].dec}</h1>`
+
+            );
+
+        }
+      
+        var teacher = [
+            {name: '李局长',age:18},
+            {name: '吴鹿',age:27},
+            {name: '今夏',age:37},
+            {name: '老师',age:47},
+        ]
+          for(var i=0;i<teacher.length;i++){
+                if(teacher[i].age>18){
+                    document.write(`<h1>姓名: ${teacher[i].age},描述：${teacher[i].age}</h1>`);
+                }else if(teacher[i].age<=18){
+                    console.log('李局长')
+                }
+          }
+
+
+
+
+
+
+</script>

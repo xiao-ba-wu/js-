@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 数组中 放的是相同的数据类型：要么都是数组 对象或者 字符串
+    // 对象当中放的是不同的数据类型结构
+    // 在 js 中轮播图数据存在的方式
+    // 每一条数组都是有意义的：即要让 数据结构符合 html 结构：又要让 意义符合
+    var swipers = [
+        'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2534506313,1688529724&fm=26&gp=0.jpg',
+        'https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3252521864,872614242&fm=26&gp=0.jpg',
+        'https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4018557288,1217151095&fm=26&gp=0.jpg',
+       'https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1035415831,1465727770&fm=26&gp=0.jpg',
+      
+      nav=[ {
+            title:'精选',
+           text: '为你推荐'
+         },
+         {
+            title:'进口',
+           text: '优质进口'
+         },
+         {
+            title:'优惠',
+           text: '特惠好物'
+         },
+         {
+            title:'新品',
+           text: '精选精品'
+         },
+         {
+            title:'新品',
+           text: '精选精品'
+         },
+        ]
+    ]
+     
+    // for(var i = 0;i<swipers.length;i++){
+    //     res += '<img src\'"+swipers[i]+'\'>'"
+       
+    // }
+    // document.write(res)
+
+   var nav = [
+       {
+           title:'会员中心',
+           icon: 'iconfont'
+       },
+       {
+           title:'中草专辑',
+           icon: 'iconfont'
+       },
+       {
+           title:'精选品牌',
+           icon: 'iconfont'
+       },
+       {
+           title:'领卷中心',
+           icon: 'iconfont'
+       }, {
+           title:'签到',
+           icon: 'iconfont'
+       },
+   ]
+//    for(var i=;i<nav.length;i++){
+
+//    }
+    
+// var timeShop ={
+     
+//     title: '现实抢购',
+//     time: '',
+//     dec:''
+//     productlist[
+
+//     ]
+
+
+
+
+// }
+     var contene = [
+         {
+            title:'精选',
+           text: '为你推荐'
+         },
+         {
+            title:'进口',
+           text: '优质进口'
+         },
+         {
+            title:'优惠',
+           text: '特惠好物'
+         },
+         {
+            title:'新品',
+           text: '精选精品'
+         },
+     ]
+   
+     for(var i = 0;i<=contene.length;i++){
+        document.write(contene[i])
+     }
+
+
+     var content =[
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+         {
+             icon: 'http\\www.baidu',
+             tetx: 'daisy女士2020春夏发呢可威风呢我看',
+             digital: '99.0',
+             text_:'已收899件'
+         },
+     ]
+
+     for(var key in content){
+    // console.log(arr[index]);
+    console.log(content);
+}
+
+
+function forEach(obj, fn){
+if( obj instanceof Array){
+obj.forEach( (item, index)=>{
+fn( index, item)
+})}else{
+for(key in obj){
+fn(key , obj[key])
+}
+}
+}
+// var content = [1,56,3,4];
+// var obj = {1: 'stu',2: 'sfr',3: ' smf'}
+// forEach(content, ( index, item)=>{
+// console. log( index, item)
+// })
+forEach(content, function(key,value){
+console.log(key, value)
+})
+
+
+  var product =[
+    {
+      
+        title:'热门推荐',
+        list:[
+            {name: '推荐推荐'},
+            {name: '推荐推荐'},
+        ]
+
+
+    },
+    {
+      
+      title:'热门推荐',
+      list:[
+          {name: '推荐推荐'},
+          {name: '推荐推荐'},
+      ]
+  },
+  {
+      
+      title:'热门推荐',
+      list:[
+          {name: '推荐推荐'},
+          {name: '推荐推荐'},
+      ]
+
+
+  },
+
+
+
+
+
+
+
+  ]
+  console.log(product)
+
+</script>
