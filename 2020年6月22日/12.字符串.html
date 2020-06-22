@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    // 1: 字符串对象有长度  length 表示字符个数
+    // 2： 有索引值 索引值从 0 开始 可以根据索引值获取 单个字符
+    // 3： 有api 可以通过 api 操作字符串： 增删改查 替换 截取片段
+    var  str = 'fewfewf54815618185fef'
+    console.dir(str.length)
+     var str = new String('fewfewfewff')
+     console.log(str)
+    //  获取 字符串 长度
+    var len = str.length;
+    console.log(len) // 11 number类型
+
+    // 获取每一个字符
+    console.log(str[0])
+    
+     // 获取最后一个字符
+     console.log(str[str.length-1])
+
+    //  获取每一个字符
+    for(var i = 0;i<str.length;i++){
+        console.log(str[i])
+    }
+
+    // 判断是否存在 某个字符
+
+     var add = '5985a5a6fggjaiwcahwujhw'
+     var dsd = 'a'
+    //   如何判断 str 中是否有 newstr
+    //   string.indexof() 返回值为-1 string 中一定没有 str 字符
+
+    // 第一次出现的 位置
+     console.log(add.indexOf(dsd))  //4
+     // 最后的一次 出现的位置
+     console.log(add.lastIndexOf(dsd))  //16
+     //
+     console.log(add.charAt(dsd))
+     //
+     console.log(add.charCodeAt(dsd))
+
+
+     // 替换
+
+     var  ass = '日本人,美国人,韩国人';
+    //  replace() 替换，返回替换后的结果；原来的字符没有变化
+    //  将 str 匹配到的结果 被 new str 所替换
+     var str = ass.replace(/['人']/g,'狗')
+     console.log(str)
+
+     
+     // 截取字符片段
+     var ass = '5254985huhfuewgfuewu33r2fhf'
+      // slice(a，b) 表示从第几个索引值开始截取第几个索引字符： 不包含 b  包含a
+      // 片段字符长度 a b
+     var res4 = (ass.slice(3,7));
+     console.log(res4)
+
+    // substr(a,d) 返回字符片段  表示从第 a 开始截取字符长度 为 d
+     var res5 = ass.substr(5,6)
+     console.log(res5)
+
+
+     var res6 = ass.substring(3,7)
+     console.log(res6)
+     // charat() 返回转入索引值 对应的字符
+     var resa  = ass.charAt(3)
+     console.log(resa)
+
+     // 将所有字母转换为 小写
+     var reses = ass.toLocaleLowerCase()
+     console.log(reses)
+     // 将所有字母转换为   大写
+     var resess = ass.toLocaleUpperCase()
+     console.log(resess)
+
+
+
+
+
+
+
+
+</script>
