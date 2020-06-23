@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var arr = [2, 3, 6, 5, 9, 5, 56, 55, 9, 5, 5, 5, 1,]
+    // forEach() 作用遍历数组：参数为回调函数
+    // 回参一：数组元素 item
+    // 回参二：数组索引这 index
+    arr.forEach(function (item, index) {
+
+        console.log(index, '-----')
+        console.log(item)
+
+    })
+
+
+    // 数组排序
+    // 只适合数字排序
+    var arr = [1, 2, 3, 5, 8, 5, 9, 8, 2, 9, 2, 8, 'adfsf', 'fdfewfeg']
+    arr.sort(function (x, y) {
+        return x - y
+    })
+    console.log(arr)
+
+
+
+
+
+    //如何判断某个数值中是否含有某个元素
+
+    var arr =['222','故困',23,true];
+
+    // 1：方式一 遍历 + if
+    for(var i=0;i<arr.length;i++){
+            if(arr[i] === '故困'){
+
+                alert('找到了')
+                break
+            }
+    }
+
+
+    // 方式二 
+    // arr.indexof(item) 返回数组元素的索引值。如果为 -1 证明数组中没有这个元素
+    var res = arr.indexOf('adad')
+    if(res !=1){
+        alert('zhapdaole')
+    }
+    console.log(res)
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

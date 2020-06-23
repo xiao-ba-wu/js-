@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      var arr = ['1',12]
+    // 通过构造函数的方式 创建数组12
+      var arr1 = new Array(5,8,5)
+      console.log(arr1)
+    // 方式一  从尾部添加
+      arr[arr.length] = 'aaa' 
+      arr[arr.length] = 'bbb' 
+       console.log(arr)
+    
+    // 方式二
+    // push() 作用 从数组的尾部添加数据 参数为被添加的元素
+    arr1.push('api尾部的内容')
+    // 方式三
+    // unshift（） 向数组的开头添加一个或个删除，并返回新的数组长度
+    arr1.unshift('adadaf')
+    arr1.unshift('adadaf')
+    arr1.unshift('adadaf')
+    console.log(arr1)
+    // ---------------------------------------
+    
+
+    // 删除数组中的元素
+
+    var str = [1,2,4,65,2,3]
+    // pop()从尾部删除，长度减1 返回被删除的元素
+    str.pop()
+    str.pop()
+    console.log(str)
+
+    // shift() 从头删除：长度减1  返回被删除的元素
+    var res = str.shift();
+    console.log(res)
+
+    //需求用 for 全部清空数组
+    for(var i = str.length;i>0;i--){
+        str.pop()
+        console.log(str,'------')
+    }
+
+    // 删除替换和插入
+       var bool = [1,8,2,8,5,88,5,8,5,8,5,8]
+       // splice(a,b,替换内容) 删除 替换 插入
+       // 参数一 ；从第几个索引值开始
+       // 参数二 ： 删除几个元素（包含a）
+       // 参数n：替换或者 插入的内容
+
+       // 1：清空数组  arr.splite(0)
+       // 如果一个参数：表示从第几个索引值开始  删除后面所有元素
+       // 如果两个参数：表示从第几个索引值开始：删除几个元素
+       // 如果三个或者n个参数：表示从第几个索引值开始　删除几个　替换几个　；
+       // 　　或者插入几个，删除０个是插入　　删除１　添加１　是替换
+       bool.splice(5,0,'nihaopa','sds','ff3f')
+       console.log(bool)
+
+       // 其他数组的api
+        
+    var unde = [1,2,8,8]
+    var fin = [5,8,4,9,8]
+    var res ;
+    // concat()作用: 合拼数组并返回后的的数组
+
+    // 合并数组的优化方式
+    res = unde.concat(fin)
+    console.log(res)
+
+    // 重点合并数组
+
+
+    // 颠倒数组
+
+    
+    // reverse() 颠倒数组
+
+
+    var arra = [2,5,8,4,85,7,5,4,8,5,5,9,512,52]
+    // slice(A,B) 返回数组片段
+    // 参一: 从那个索引值开始
+    // 参二: 到那个索引值结束:包括 a 不包括 b 
+    var asse = arra.slice(3,6);
+    console.log(asse)
+     
+   
+
+</script>
