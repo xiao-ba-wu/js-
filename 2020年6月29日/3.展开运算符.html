@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      var arr = [1,2,5,5,4];
+      // res 中数组内容域 arr 中一摸一样
+
+
+      // ... array/object 展开运算符适用于对象和数组
+      var res = [...arr]
+      console.log(res)
+    
+      var obj = {
+          name:'adad',
+          age:'22'
+      }
+    //    与 obj 内容一摸一样
+    var clone ={}
+    for(var x in obj){
+        clone[x] = obj[x]
+    }
+    console.log(clone)
+
+
+    var clone1={...obj}
+     console.log(clone1)
+
+     // 总结
+     // 展开对象 用对象接受：展开数组用数组接收
+
+
+</script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+</body>
+</html>
+<script>
+    //    拷贝 就是 复制
+    // 深拷贝 
+    // 浅拷贝
+     
+
+     // 深
+     var str = 'aaa'
+     var copystr = str,
+      copystr = copystr + 'opop'
+      console.log(copystr,str)
+     
+
+    //  浅
+     var arr = [1,2,3,4]
+     var copyarr = arr
+     copyarr.push('adad   vvvv')
+     arr.push('oj')
+     console.log(copyarr,arr)
+     
+     //对象与数组  直接复制变浅 实现的都是浅拷贝
+
+     // 如何实现对象与数组的深拷贝呢
+     var arr1 = ['sss',1,2,3]
+     var obj = {
+         name: 'aaa',
+         age: '23'
+     }
+    
+    var op = arr1
+    var op = op + 123
+    console.log(op,arr1)
+
+
+
+
+
+
+
+    var me = [...arr1]
+    me.push('aaa')
+    var em = {...obj}
+    console.log(em)
+    console.log(me,arr1)
+
+   
+
+   // 内存  ：堆  栈
+   // 基本类型中数据全局存在 栈 中
+   // 引用类型数据存在 堆中 在 栈 中 存的 在堆中地址
+   // 浅拷贝  拷贝的数地址
+   // 深拷贝： 在堆
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    // 数组排序
+    var arr = [2, 5, 2, 8, 2, 5, 8, 2, 5, 2, 5, 2, 22, 5, 8, 79, 5]
+
+    // 只要是对数组操作：你要知道 你是修改原来的数组，还是返回一个新的数组
+
+    // 思路： 改变原来数组呢？
+    for (var i = 0, len = arr.length; i < len; i++) {
+        // arr[i] //前面的数据
+        for (var j = 0; j < arr.length; j++) {
+            // arr[j] 是一个带比较的数据
+            if (arr[i] > arr[j]) {
+                var tmp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = tmp
+            }
+        }
+    }
+    console.log(arr)
+
+
+</script>

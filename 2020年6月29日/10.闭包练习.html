@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <ul>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      
+    </ul>
+</body>
+</html>
+<script>
+         (function(window){
+            var num = 0;
+            // foo 是 window 属性 全局  foo 的存为伪指针
+            window.foo =function(){
+                // 全局函数访问  私有的 立即执行函数 num
+                var count = 0;
+                return function bar(){
+                    console.log(count++);
+                };
+            };
+         })(window)
+           
+           var bar = foo()
+           bar ()
+           bar()
+           console.log(bar)
+
+
+   
+    
+
+
+        
+    
+</script>
