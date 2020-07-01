@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+</html>
+<script>
+    // 计时器
+    // 每隔多少毫秒执行一次  回调函数  无限循环的执行
+
+    // 出口：
+    // 
+
+    var x = 0;
+    // 注意：多刺1执行同一个setInterval   到底清空哪一个？
+    // timer 表示 每一个计时器的身份
+    var timer = setInterval(function () {
+        x++;
+        console.log(x);
+        if (x > 10) {
+            // 清空计时器  如果不清空计时器  导致页面的性能特别差
+            // 导致清空哪一个计时器
+            clearInterval(timer);  // 清空的是最后一个 timer 
+        }
+        console.log('1111111')
+    }, 1500)
+    // timer 形成多个：需要清空每一个 timer
+    console.log(timer)
+
+     var timer;
+     for(var i = 0;i<3;i++){
+      var x = 0;
+      timer = setInterval(function(){
+          console.log('2222')
+      },500)
+ 
+      console.log(timer,'=======');
+
+      clearInterval(timer) //  清空了 多个 tiamer  坑: setInterval 失效了
+      // 
+      // 目的: 需要  分别保存 timer 的值?  1,2,3
+
+
+     }
+   
+
+     
+
+
+
+
+
+
+
+
+
+</script>
