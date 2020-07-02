@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var arr = [1, 2, 5, 2, 58, 2, 2]
+    //     for(var i = 0;i<arr.length;i++){
+    //         for(var j = i+1;j<arr.length;j++){
+    //             if(arr[i]==arr[j]){
+    //                 arr.splice(j,1)
+    //                 j--
+    //             }
+    //         }
+    //     }
+    //   console.log(arr)
+    // var str = [1, 2, 8, 25, 8, 5, 5, 2, 5, 5, 5.9]
+    // function array() {
+    //     for (var i = 0; i < arr.length; i++) {
+    //         for (var j = i + 1; j < arr.length; j++) {
+    //             if (arr[i] == arr[j]) {
+    //                 arr.splice(j, 1)
+    //                 j--
+    //             }
+    //         }
+    //     }
+    //     console.log(arr)
+    // }
+    //      array(1,2,2,8,2,8,2,8,28)
+       
+
+    function arrDuplicate(arr) {
+        // 代码规范：错误优先原则 
+        // 先验证长度 再验证类型
+        if (arguments.length > 1) {
+          throw new Error("arguement.length can not gt 1");
+        }
+        if (arguments.length == 0) {
+          throw new Error("param can not undefined");
+        }
+        if (!Array.isArray(arr)) {
+          // 抛出错误有阻止下面代码执行的作用
+          throw new Error(" params must is Array");
+        }
+        // 只有正确时候下面才会执行
+        var res = [];
+        var flag = false;
+        for (var i = 0, len = arr.length; i < len; i++) {
+          for (var j = 0; j < res.length; j++) {
+            if (arr[i] == res[j]) {
+              flag = true;
+              break;
+            } else {
+              flag = false;
+            }
+          }
+          if (!flag) {
+            res.push(arr[i]);
+          }
+        }
+        return res;
+      }
+     var s = arrDuplicate([2,5,88,2,5,2,2,8,2,2,2,5,5,2,8,2,5,5,2,5,5,5,,2,5,2,5,,5,,5,])
+     console.log(s)
+</script>

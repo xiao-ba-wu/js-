@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+               function sort(arr){
+                  if(arguments.length === 0){
+                      throw new Error ('parm can is not undefined')
+                  }
+                  if(arguments.length>1){
+                      throw new Error ('parm.length can is not gt 1 ')
+                  }
+                  if(!Array.isArray(arr)){
+                      throw new Error ('parms must is array')
+                  }
+              for(var i = 0;i<arr.length;i++){
+                  // arr[i]  小前
+                  arr[i]
+                  for(var j = i+1;j<arr.length;j++){
+                      // arr[j] 大后
+                      if(arr[i]>arr[j]){
+                          // 数据的换值
+                          var tmp = arr[i];
+                          arr[i]  =arr[j];
+                          arr[j] = tmp;
+                      }
+                  }
+              }
+           return arr;
+               }
+               var arr = [1,2,8,2,8,2,8,2,8,5,8,true,undefined]
+               var res = sort(arr)
+               console.log(res)
+ 
+
+
+
+</script>

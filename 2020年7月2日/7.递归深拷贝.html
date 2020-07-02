@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        var obj = {
+            naem:'小李子',
+            list:[
+                {
+                    name: '小李'
+                },{
+                    name:'大威天龙',
+                    say:'区区八个魂环，唐浩，身为天下第一'
+                }
+            ]
+        }
+           // deepCopy  实现的是数组或者对象的深层拷贝
+           // 递归 深 拷贝
+            function deeCopy(params){
+                // 如果是数组
+                if(params.constructor === Array){
+                    var res  = []
+                    for(var i = 0;i<params.length;i++){
+                        if(params[i] instanceof Object){
+                            // 将深层拷贝的结果添加到  res 中 
+                            res.push(deeCopy(params[i]))
+                        }else{
+                            res.push(params[i])
+                        }
+                    }
+                    return res;
+                }
+                // 如果是对象
+                if(params.constructor === Object){
+                    var res = {};
+                    for(var x in params){
+                        if(params[x] instanceof Object){
+                            res[x] = deeCopy(params[x])
+                        }
+                        else{
+                            res[x] = params[x]
+                        }
+                        // res[x] = params[x]
+                        // res[x] //表示数组独享
+                    }
+                    return res;
+                }
+            }
+  
+          var res = deeCopy(obj)
+          obj.list[0].dec = 'aaa'
+            console.log(res)
+         
+           console.log(obj)
+            // 未来的面试题：考察 大家： js基础逻辑问题：
+            // 递归 逻辑 递归 if for 方法封装 综合掌握度
+            // 如何写余数类型有关的判断表达式
+
+</script>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 变量或属性key 赋值 js 基本类型数据  存的是数据
+    // 变量或属性key 赋值引用类型数据    存的是【指针】
+//     var obj = {
+//         name: 'yu',
+//         age: 18
+//     }
+//     var res = {}
+//     // xxx.xx.xx  点左边的赋值都是对象   xx 本身类型是   字符串
+//     for (var x in obj) {
+//         res[x] = obj[x]
+//     }
+//     console.log(res)
+
+//     function copyobject() {
+//         if (arguments.length == 0) {
+//             throw new Error('6666666')
+//         }
+//         if (arguments.length > 1) {
+//             throw new Error('arurmrnts.length can not gt 1')
+//         }
+//         if (obj.constructor !== Object) {
+//             throw new Error('param must be object')
+//         }
+//         var res = {};
+//         for (var x in obj) {
+//             res[x] = obj[x];
+//         }
+//         return res;
+//     }
+//     copyobject({
+//         name: '发小',
+//         age: '88'
+//     })
+//    var s = copyobject([])
+//      console.log(s)
+
+//     function copyarray(arr) {
+//         if (arguments.length == 0) {
+//             throw new Error('6666666')
+//         }
+//         if (arguments.length > 1) {
+//             throw new Error('arurmrnts.length can not gt 1')
+//         }
+//         if (!Array.from(arr)) {
+//             throw new Error('param must be object')
+//         }
+//         var res = []
+//         for (var i = 0; i < arr.length; i++) {
+//             res.push(arr[i])
+//         }
+//         return res;
+//     }
+
+//     var s= copyarray([1, 2, 8, 2, '2', 5])
+//     console.log(s)
+
+
+    // copy  拷贝数组或者对象 并返回结果
+
+        function copy(param){
+            if (arguments.length == 0) {
+            throw new Error('6666666')
+        }
+        if (arguments.length > 1) {
+            throw new Error('arurmrnts.length can not gt 1')
+        }
+         if(!(param instanceof Object)){
+             throw new Error ('typrof param musr be ararry or object')
+         }
+
+
+           // 如果参数为 数组
+            if(param.constructor === Array){
+              var res = []
+              for(var i = 0,len=param.length;i<len;i++){
+                  res.push(param[i])
+              }
+              return res;
+            }
+            // 如果参数为对象 进行对象的单层拷贝
+            if(param.constructor === Object){
+                var res = {};
+                for(var x in param){
+                    res[x] = param[x];
+                }
+                return res;
+            }
+        }
+         
+
+      var res = copy({name:"唐浩",obj:{name:'aaa'}});
+      var res1 = copy([1,1,1,[2,5,2,5,2,5,2,8,2,5,22,8,,2,8,2]]);
+       console.log(res);
+       console.log(res1);
+
+
+
+
+
+</script>
